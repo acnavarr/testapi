@@ -3,7 +3,7 @@ Feature: Test resource for the breeds API
   Background:
     Given The user sets REST API url "v1"
 
-  Scenario Outline:1. GET resource to workload
+  Scenario Outline:1. GET resource to breeds
     Given The user sets the API resource "<resource>"
     When The user sets HEADER param request with content type as "application/json"
     And Send HTTP method "<method>" with body "<body>"
@@ -15,7 +15,7 @@ Feature: Test resource for the breeds API
       | breeds/chau | GET    | {}   |response-breeds-breed_id|
 
 #
-  Scenario Outline:1. GET resource to workload
+  Scenario Outline:1. GET resource to breeds with limit and page
     Given The user sets the API resource "breeds"
     When The user sets HEADER param request with content type as "application/json"
     And The user sets path <page> and <limit>
@@ -29,7 +29,7 @@ Feature: Test resource for the breeds API
       | GET    | {}   |     200      | 8   |   6 |
 
 
-  Scenario Outline:1. GET resource to workload
+  Scenario Outline:1. GET resource to breeds, bad path
     Given The user sets the API resource "<resource>"
     When The user sets HEADER param request with content type as "application/json"
     When Send HTTP method "<method>" with body "<body>"
