@@ -7,7 +7,7 @@ source venv/bin/activate; \
 pip install -r requirements.txt; \
 pip install --upgrade pip; \
 
-
+ejecutar los escenario : make by_name name=breeds
 
 para ver los resultados con ayuda de allure
 
